@@ -1,0 +1,32 @@
+{
+	"config":{
+		"src":"~price.xlsx",
+		"param":"~price.json",
+		"title":"Каталог"
+	},
+	"configtpl":{
+		"crumb":"{crumb}"
+	},
+	"jsontpl":"-expo/?src={config.src}&param={config.param}",
+	"tpl":"-expo/layout.tpl",
+	"tplroot":"EXPO",
+	"child":{
+		"configinherit":true,
+		"jsontpl":"-expo/?src={config.src}&param={config.param}",
+		"tpl":"-expo/layout.tpl",
+		"tplroot":"EXPOGROUP",
+		"child":{
+			"configinherit":true,
+			"parsedtpl":"{crumb}",
+			"jsontpl":"-expo/?src={config.src}&param={config.param}",
+			"tpl":"-expo/layout.tpl",
+			"tplroot":"EXPOGROUPITEM"
+		}
+	},
+	"childs":{
+		"bid":{
+			"configinherit":true,
+			"external":"-expo/bid/layer.json"
+		}
+	}
+}

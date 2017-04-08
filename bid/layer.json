@@ -1,0 +1,11 @@
+{
+	"config":{
+		"src":"~price.xlsx",
+		"param":"~price.json",
+		"title":"Каталог"
+	},
+	"autosavename":"price",
+	"tpl":"-expo/bid/layout.tpl",
+	"jsontpl":"-expo/?src={config.src}&param={config.param}",
+	"onsubmit":true
+}

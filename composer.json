@@ -1,0 +1,10 @@
+{
+	"name":"akiyatkin/expo",
+	"require":{
+		"infrajs/excel":"~1",
+		"infrajs/load":"~1",
+		"infrajs/autosave":"~1",
+		"infrajs/layer-onsubmit":"~1",
+		"infrajs/layer-config":"~1"
+	}
+}

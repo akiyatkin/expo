@@ -1,0 +1,5 @@
+{
+	"dependencies":["controller","event","price"],
+	"js":"bid.js",
+	"update":"update.php"
+}
