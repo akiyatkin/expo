@@ -10,7 +10,7 @@
 		{config.ans.result?:ready?:showform}
 	</div>
 {ready:}<h3>Благодарим за заказ!</h3>
-	<a class="a" href="/form" onclick="delete Controller.ids[{id}].config.ans">Корректировать заявку</a><br>
+	<a class="a" href="/{config.crumb}/bid" onclick="delete Controller.ids[{id}].config.ans">Корректировать заявку</a><br>
 	{config.ans:ans.msg}
 	<script>
 		domready( function () {

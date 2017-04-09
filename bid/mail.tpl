@@ -24,7 +24,7 @@ IP: {ip}
 Дополнительная упаковка: {boxing?:Да?:Нет}
 Адрес доставки: {address_delivery}
 {positions:}
-{Наименование} 
+{Артикул} 
 	{count} по {~cost(cost,~true)} руб. = {~cost(sum,~true)} руб.
 
 {delother:}Другая транспортная компания: {name_transport}
