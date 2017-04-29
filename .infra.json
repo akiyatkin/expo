@@ -1,4 +1,5 @@
 {
 	"css":"style.css",
-	"js":"bid/bid.js"
+	"js":"bid/bid.js",
+	"update":"update.php"
 }
