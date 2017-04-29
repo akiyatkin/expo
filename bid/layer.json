@@ -7,5 +7,6 @@
 	"autosavename":"price",
 	"tpl":"-expo/bid/layout.tpl",
 	"jsontpl":"-expo/?src={config.src}&param={config.param}",
+	"goal":"expo",
 	"onsubmit":true
 }
