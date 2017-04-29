@@ -12,18 +12,6 @@
 {ready:}<h3>Благодарим за заказ!</h3>
 	<a class="a" href="/{config.crumb}/bid" onclick="delete Controller.ids[{id}].config.ans">Корректировать заявку</a><br>
 	{config.ans:ans.msg}
-	<script>
-		domready( function () {
-			if (window.Ya && Ya._metrika.counter) {
-				var ya = Ya._metrika.counter;
-				ya.reachGoal('expo');
-			}
-			if (window.ga) {
-				ga('send', 'event', 'Оформить заявку', 'Отправить');//depricated
-				ga('send', 'event', 'expo');
-			}
-		});
-	</script>
 {ans::}-ans/ans.tpl
 {tabs:}
 	<li role="presentation" class="{~first()?:active}"><a href="#tab{id}" data-crumb="false" aria-controls="tab{id}" role="tab" data-toggle="tab">{title}</a></li>
