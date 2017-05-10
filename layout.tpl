@@ -75,7 +75,7 @@
 		<a href="/{config.crumb|crumb}/{...title}" style="margin-bottom: 0; text-align:left; border:solid 1px #eee; display:block;">	
 			<div class="text-success absblock" style="margin-left:10px; margin-top:10px;">{Артикул}</div>
 			<div style="min-height:50px">
-				<img class="img-responsive" src="/-imager/?w=400&h=50&crop=1&src={data.folder}{...title}/{Наименование}.jpg&or={data.folder}{...title}/{Артикул}.jpg">
+				<img class="img-responsive" src="/-imager/?h=250&src={data.folder}{...title}/{Наименование}.jpg&or={data.folder}{...title}/{Артикул}.jpg">
 			</div>
 		</a>
 		{:presentcost}
