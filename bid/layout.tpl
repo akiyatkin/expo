@@ -240,12 +240,12 @@
 	<i>Транспортная компания <b>{name}</b> дополнительную упаковку для наших клиентов производит бесплатно.</i>
 {position:}
 	<div class="form-group block" data-Опт="{Опт}" data-Акция="{Акция|Цена}" data-Цена="{Цена}">
-		<a href="/{config.crumb}/{...title}/{Артикул}" style="text-align:left" for="input_cell{~key}{id}" class="col-sm-5 control-label spec-name">{Артикул}</a>
-		<label for="input_cell{~key}{id}" class="col-sm-2 control-label"><b><span class="cost">{~cost(Цена)}</span>&nbsp;руб.</b></label>
-		<div class="col-sm-2 counter">
+		<a href="/{config.crumb}/{...title}/{Артикул}" style="text-align:left" for="input_cell{~key}{id}" class="col-sm-4 col-md-5 control-label spec-name">{Артикул}</a>
+		<label for="input_cell{~key}{id}" class="col-sm-2 col-md-2 control-label"><b><span class="cost">{~cost(Цена)}</span>&nbsp;руб.</b></label>
+		<div class="col-sm-3 col-md-2 counter">
 			<input data-name="{Артикул}" data-group="{...title}" name="pos[{...title}][{Артикул}]" name="fax" type="number" class="form-control input-number" id="input_cell{~key}{id}" placeholder="шт" value="0" min="0" max="9999">
 		</div>
-		<label for="input_cell{~key}{id}" class="col-sm-3 control-label">
+		<label for="input_cell{~key}{id}" class="col-sm-3 col-md-3 control-label">
 			<div class="pos_sum" style="padding:2px 5px">{sum|:0}&nbsp;руб.</div>
 		</label>
 	</div>
