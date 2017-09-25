@@ -158,24 +158,33 @@
 				if (pos['Артикул'] == name) return pos;
 			});
 		},
-		rebase:function(){
+		rebase: function () {
 			delete bid.layer.config.ans;
 			infrajs.check();
 		},
-		
 		count_all: function (layer) {
 			var div = $('#'+layer.div);
 			var cost=bid.get(layer, 'cost');
 			if (!cost) cost = 'Цена';
+			var groups = { };
 			div.find('.counter input').each(function(){
 				var name = $(this).data('name');
 				var group = $(this).data('group');
+				
+				
+				
+
+
 				var count = parseInt($(this).val());
-				if (!count) count=0;
+				if (!count) count = 0;
+
+				if (!groups[group]) groups[group] = 0;
+				if (count) groups[group] += count;
+
 				/* Назначение суммы и количества в прайс */
-				var pos=bid.get_pos(layer, group, name);
-				var valcost = pos[cost]?pos[cost]:pos['Цена'];
-				var sum=count*valcost;
+				var pos = bid.get_pos(layer, group, name);
+				var valcost = pos[cost] ? pos[cost] : pos['Цена'];
+				var sum = count * valcost;
 
 				pos['sum'] = sum;
 				pos['count'] = count;
@@ -185,6 +194,16 @@
 				if (count) $(this).parents('.block').find('.pos_sum').show().html(psum);
 				else $(this).parents('.block').find('.pos_sum').hide().html('');
 			});
+
+			for (var i in groups) {
+				var id = Path.encode(i);
+				if (!groups[i]) {
+					$('#tabnum'+id).css("visibility","hidden");
+				} else {
+					$('#tabnum'+id).css("visibility","visible");
+				}
+				$('#tabnum'+id).html(groups[i]);
+			}
 			var all_sum = 0;
 			var data = Load.loadJSON(layer.json);
 			for (var i in data.list) {
@@ -192,7 +211,6 @@
 					if (pos['sum']) all_sum += pos['sum'];
 				});
 			}
-
 			div.find('.all_sum').html(infra.template.scope['~cost'](all_sum));			
 		},
 		clear: function(layer){
@@ -201,7 +219,7 @@
 			div.find('form')[0].reset();
 			this.count_all(layer);
 		},
-		set:function(layer, name, value){
+		set: function(layer, name, value){
 			if(!name) var right = [];
 			else var right = Sequence.right(name);
 			var right = Sequence.right(name);

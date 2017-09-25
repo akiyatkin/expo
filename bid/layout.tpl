@@ -14,7 +14,11 @@
 	{config.ans:ans.msg}
 {ans::}-ans/ans.tpl
 {tabs:}
-	<li role="presentation" class="{~first()?:active}"><a href="#tab{id}" data-crumb="false" aria-controls="tab{id}" role="tab" data-toggle="tab">{title}</a></li>
+	<li role="presentation" class="{~first()?:active}">
+		<a style="padding:10px 7px" href="#tab{id}" data-crumb="false" aria-controls="tab{id}" role="tab" data-toggle="tab">
+			{title} 
+			<span id="tabnum{id}" style="visibility: hidden; background-color:#6e8aba; margin-left:3px" class="badge badge-pill badge-info">0</span>
+		</a></li>
 {tabscontent:}
 	<div role="tabpanel" class="tab-pane fade {~first()?:active in}" id="tab{id}">
 		<h3>{title}</h3>
